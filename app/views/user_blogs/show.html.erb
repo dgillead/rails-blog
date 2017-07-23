@@ -3,5 +3,6 @@
 <p class="text-center"><%= @blog.description %></h1>
 
 <div class="footer">
-<%= link_to 'Edit Blog', edit_user_blog_path(@blog) %>
+  <%= link_to 'Edit Blog', edit_user_blog_path(@blog) %>
+  <%= link_to 'Delete Blog', user_blog_path(@blog), method: :delete %>
 </div>

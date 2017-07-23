@@ -1,5 +1,5 @@
 class UserBlogsController < ApplicationController
-  before_action :find_blog, only: [:show, :edit, :update]
+  before_action :find_blog, only: [:show, :edit, :update, :destroy]
 
   def index
     @blogs = UserBlog.all
@@ -22,6 +22,11 @@ class UserBlogsController < ApplicationController
   end
 
   def edit
+  end
+
+  def destroy
+    @blog.destroy
+    redirect_to '/user_blogs'
   end
 
   def update
