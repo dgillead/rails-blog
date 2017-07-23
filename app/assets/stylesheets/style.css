@@ -2,3 +2,15 @@
   margin: 10px;
   width: 50%;
 }
+
+#blog-posts {
+  width: 80%;
+}
+
+#post-date {
+  float: right;
+}
+
+#post-text {
+  clear: both;
+}

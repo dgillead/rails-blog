@@ -19,6 +19,7 @@ class UserBlogsController < ApplicationController
   end
 
   def show
+    @current_posts = @user_blog.blog_posts
   end
 
   def edit
