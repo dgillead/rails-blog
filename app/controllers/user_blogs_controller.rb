@@ -2,17 +2,17 @@ class UserBlogsController < ApplicationController
   before_action :find_blog, only: [:show, :edit, :update, :destroy]
 
   def index
-    @blogs = UserBlog.all
+    @user_blogs = UserBlog.all
   end
 
   def new
-    @blog = UserBlog.new
+    @user_blog = UserBlog.new
   end
 
   def create
-    @blog = UserBlog.new(blog_params)
-    if @blog.save
-      redirect_to @blog
+    @user_blog = UserBlog.new(user_blog_params)
+    if @user_blog.save
+      redirect_to @user_blog
     else
       render :new
     end
@@ -25,13 +25,13 @@ class UserBlogsController < ApplicationController
   end
 
   def destroy
-    @blog.destroy
+    @user_blog.destroy
     redirect_to '/user_blogs'
   end
 
   def update
-    if @blog.update_attributes(blog_params)
-      redirect_to @blog
+    if @user_blog.update_attributes(user_blog_params)
+      redirect_to @user_blog
     else
       render :edit
     end
@@ -39,11 +39,11 @@ class UserBlogsController < ApplicationController
 
   private
 
-  def blog_params
+  def user_blog_params
     params.require(:user_blog).permit(:title, :category, :description)
   end
 
   def find_blog
-    @blog = UserBlog.find_by(id: params[:id])
+    @user_blog = UserBlog.find_by(id: params[:id])
   end
 end

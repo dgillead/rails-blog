@@ -1,7 +1,7 @@
 <h1 class="text-center">Your Blogs</h1>
 
 <ul class="list-group">
-  <% @blogs.each do |blog| %>
-    <li class="list-group-item text-center center-block"><%= link_to blog.title, blog %></li>
+  <% @user_blogs.each do |user_blog| %>
+    <li class="list-group-item text-center center-block"><%= link_to user_blog.title, user_blog %></li>
   <% end %>
 </ul>

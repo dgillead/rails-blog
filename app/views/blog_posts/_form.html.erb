@@ -1,0 +1,22 @@
+<%= form_for ([user_blog, blog_post]) do |f| %>
+
+<div class="field">
+  <%= f.label :title %><br />
+  <%= f.text_field :title, autofocus: true %>
+</div>
+
+<div class="field">
+  <%= f.label :date_posted %><br />
+  <%= f.date_field :date_posted %>
+</div>
+
+<div class="field">
+  <%= f.label :blog_text %><br />
+  <%= f.text_area :blog_text %>
+</div>
+
+<div class="actions">
+  <%= f.submit %>
+</div>
+
+<% end %>

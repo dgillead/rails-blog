@@ -1,8 +1,9 @@
-<h1 class="text-center"><%= @blog.title %></h1>
-<p class="text-center"><%= @blog.category %></h1>
-<p class="text-center"><%= @blog.description %></h1>
+<h1 class="text-center"><%= @user_blog.title %></h1>
+<p class="text-center"><%= @user_blog.category %></h1>
+<p class="text-center"><%= @user_blog.description %></h1>
 
 <div class="footer">
-  <%= link_to 'Edit Blog', edit_user_blog_path(@blog) %>
-  <%= link_to 'Delete Blog', user_blog_path(@blog), method: :delete %>
+  <%= link_to 'Edit Blog', edit_user_blog_path(@user_blog) %>
+  <%= link_to 'Delete Blog', user_blog_path(@user_blog), method: :delete %>
+  <%= link_to 'Create Blog Post', new_user_blog_blog_post_path(@user_blog) %>
 </div>

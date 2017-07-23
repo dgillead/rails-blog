@@ -1,3 +1,3 @@
 class BlogPost < ApplicationRecord
-  belongs_to :blog
+  belongs_to :user_blog
 end

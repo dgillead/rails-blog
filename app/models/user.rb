@@ -3,6 +3,6 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-  has_many :blogs
-  has_many :blog_posts, through: :blogs
+  has_many :user_blogs
+  has_many :blog_posts, through: :user_blogs
 end
