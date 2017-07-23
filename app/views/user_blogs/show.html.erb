@@ -5,7 +5,7 @@
 <div class="container center-block" id="blog-posts">
     <% @current_posts.each do |current_post| %>
       <div class="panel panel-default">
-        <div class="panel-heading text-center"><%= current_post.title %></div>
+        <div class="panel-heading text-center"><%= link_to current_post.title, user_blog_blog_post_path(@user_blog, current_post) %></div>
         <div class="panel-body text-center">
           <p id="post-date"><%= current_post.date_posted %></p>
           <p id="post-text"><%= current_post.blog_text %></p>
