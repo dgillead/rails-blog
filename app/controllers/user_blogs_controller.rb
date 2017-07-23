@@ -2,6 +2,10 @@ class UserBlogsController < ApplicationController
   before_action :user_signed_in?, only: [:new, :create]
   before_action :find_blog, only: [:show]
 
+  def index
+    @blogs = UserBlog.all
+  end
+
   def new
     @blog = UserBlog.new
   end
