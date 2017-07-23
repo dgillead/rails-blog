@@ -1,6 +1,5 @@
 class UserBlogsController < ApplicationController
-  before_action :user_signed_in?, only: [:new, :create]
-  before_action :find_blog, only: [:show]
+  before_action :find_blog, only: [:show, :edit, :update]
 
   def index
     @blogs = UserBlog.all
@@ -20,6 +19,17 @@ class UserBlogsController < ApplicationController
   end
 
   def show
+  end
+
+  def edit
+  end
+
+  def update
+    if @blog.update_attributes(blog_params)
+      redirect_to @blog
+    else
+      render :edit
+    end
   end
 
   private

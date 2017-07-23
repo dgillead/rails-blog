@@ -1,3 +1,7 @@
 <h1 class="text-center"><%= @blog.title %></h1>
 <p class="text-center"><%= @blog.category %></h1>
 <p class="text-center"><%= @blog.description %></h1>
+
+<div class="footer">
+<%= link_to 'Edit Blog', edit_user_blog_path(@blog) %>
+</div>
