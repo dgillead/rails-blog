@@ -4,3 +4,4 @@
 <p class="text-center"><%= @blog_post.blog_text %></p>
 
 <%= link_to 'Edit Post', edit_user_blog_blog_post_path(@user_blog, @blog_post) %>
+<%= link_to 'Delete Post', user_blog_blog_post_path(@user_blog, @blog_post), method: :delete %>

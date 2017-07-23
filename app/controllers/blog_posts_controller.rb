@@ -1,6 +1,6 @@
 class BlogPostsController < ApplicationController
   before_action :find_blog, only: [:new, :create, :show, :edit, :update]
-  before_action :find_blog_post, only: [:show, :edit, :update]
+  before_action :find_blog_post, only: [:show, :edit, :update, :destroy]
 
   def new
     @blog_post = @user_blog.blog_posts.new
@@ -24,6 +24,11 @@ class BlogPostsController < ApplicationController
   def update
     @blog_post.update_attributes(blog_post_params)
     redirect_to user_blog_blog_post_path(@user_blog, @blog_post)
+  end
+
+  def destroy
+    @blog_post.destroy
+    redirect_to user_blogs_path
   end
 
   private
