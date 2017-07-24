@@ -14,3 +14,20 @@
 #post-text {
   clear: both;
 }
+
+#home-index-buttons {
+  width: 50%;
+}
+
+#logout-button {
+  margin: 5px;
+  float: right;
+}
+
+.home-links {
+  color: black;
+}
+
+.home-links:hover {
+  text-decoration: none;
+}

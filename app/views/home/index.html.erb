@@ -1,1 +1,13 @@
 <h1 class="text-center">Welcome</h1>
+
+
+<div class="center-block" id="home-index-buttons">
+  <div class="row">
+    <div class="col-xs-6">
+      <button class="btn btn-info"><%= link_to 'Your Blogs', user_blogs_path(current_user), class: 'home-links' %></button>
+    </div>
+    <div class="col-xs-6">
+      <button class="btn btn-success"><%= link_to 'Create Blog', new_user_blog_path, class: 'home-links' %></button>
+    </div>
+  </div>
+</div>
