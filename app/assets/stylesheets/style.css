@@ -1,6 +1,28 @@
+* {
+  font-family: 'Bellefair', serif;
+  font-size: 20px;
+}
+
+h1 {
+  clear: both;
+}
+
 .list-group-item {
   margin: 10px;
   width: 50%;
+}
+
+.btn {
+  width: 150px;
+  height: 50px;
+}
+
+#home-image {
+  background-image: url('/images/home.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 #blog-posts {
@@ -20,8 +42,14 @@
 }
 
 #logout-button {
+  width: 100px;
+  height: 45px;
   margin: 5px;
   float: right;
+}
+
+#user-greeting {
+  margin: 15px;
 }
 
 .home-links {
